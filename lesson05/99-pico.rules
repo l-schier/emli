@@ -1,0 +1,2 @@
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="2e8a", ATTRS{idProduct}=="0005",
+ATTRS{serial}=="e66118c4e38f6e2c", MODE="0666", SYMLINK+="pico_01"

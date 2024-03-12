@@ -1,0 +1,38 @@
+#!/sbin/nft -f
+
+define WAN0 = wlan0 # replace by your network device name
+
+flush ruleset
+
+table ip nat {
+	chain prerouting {
+		type nat hook prerouting priority 0; policy accept;
+	}
+
+	# for all packets to WAN, after routing, replace source address with primary IP of WAN interface
+	chain postrouting {
+		type nat hook postrouting priority 100; policy accept;
+		oifname $WAN0 masquerade
+	}
+}
+
+table ip filter {
+  # Chain for incoming traffic (INPUT)
+  chain input {
+    # Drop all traffic by default
+    type filter hook input priority 0; policy drop;
+    # Allow traffic on ports 22 (SSH) and 80 (HTTP)
+    tcp dport { 22, 80 } accept;
+  }
+
+  # Chain for forwarded traffic (FORWARD) - uncomment if needed
+  # chain forward {
+  #   type filter hook forward priority 0; policy drop;
+  #   tcp dport { 22, 80 } accept;
+  # }
+
+  # Chain for outgoing traffic (OUTPUT) - typically allow all outgoing traffic
+  chain output {
+    type filter hook output priority 0; policy accept;
+  }
+}
