@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.config_entries",
+  "data": {
+    "entries": [
+      {
+        "entry_id": "e909833045020d40896a7d8c293c7444",
+        "version": 1,
+        "minor_version": 1,
+        "domain": "sun",
+        "title": "Sun",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "import",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "3e74f3dad8821529652dd81bcc0e1e32",
+        "version": 1,
+        "minor_version": 1,
+        "domain": "bluetooth",
+        "title": "E4:5F:01:C2:AB:4C",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "integration_discovery",
+        "unique_id": "E4:5F:01:C2:AB:4C",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "f7faf61d13f09b7497c9562b7776ef9c",
+        "version": 1,
+        "minor_version": 1,
+        "domain": "shopping_list",
+        "title": "Shopping list",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "onboarding",
+        "unique_id": "shopping_list",
+        "disabled_by": null
+      },
+      {
+        "entry_id": "42e4983d305fcf2302768de874dc4df9",
+        "version": 1,
+        "minor_version": 1,
+        "domain": "google_translate",
+        "title": "Google Translate text-to-speech",
+        "data": {
+          "language": "en",
+          "tld": "com"
+        },
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "onboarding",
+        "unique_id": null,
+        "disabled_by": null
+      },
+      {
+        "entry_id": "b9765c1feaed9cd577d8045ccd2287ae",
+        "version": 1,
+        "minor_version": 1,
+        "domain": "radio_browser",
+        "title": "Radio Browser",
+        "data": {},
+        "options": {},
+        "pref_disable_new_entities": false,
+        "pref_disable_polling": false,
+        "source": "onboarding",
+        "unique_id": null,
+        "disabled_by": null
+      }
+    ]
+  }
+}

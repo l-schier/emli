@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "minor_version": 1,
+  "key": "person",
+  "data": {
+    "items": [
+      {
+        "id": "g6_home",
+        "name": "G6-HOME",
+        "user_id": "2c7e0bd4559f466ebda97037d4e57151",
+        "device_trackers": []
+      }
+    ]
+  }
+}

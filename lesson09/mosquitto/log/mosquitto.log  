@@ -1,0 +1,14 @@
+1712662250: mosquitto version 2.0.18 starting
+1712662250: Config loaded from /mosquitto/config/mosquitto.conf.
+1712662250: Opening ipv4 listen socket on port 1883.
+1712662250: Opening ipv6 listen socket on port 1883.
+1712662250: mosquitto version 2.0.18 running
+1712662251: New connection from 172.20.0.1:44724 on port 1883.
+1712662251: New client connected from 172.20.0.1:44724 as Telegraf-Consumer-PS6Ze (p2, c1, k60, u'g6').
+1712662297: New connection from 172.20.0.1:57276 on port 1883.
+1712662297: New client connected from 172.20.0.1:57276 as 2l1jHGk5BtLEcH7BzIxuTg (p2, c1, k60).
+1712662297: Client 2l1jHGk5BtLEcH7BzIxuTg disconnected.
+1712662297: New connection from 172.20.0.1:57286 on port 1883.
+1712662297: New client connected from 172.20.0.1:57286 as 07wEuQFCQRZ4HHEshtg3gC (p2, c1, k60).
+1712662445: mosquitto version 2.0.18 terminating
+1712662445: Saving in-memory database to /mosquitto/data//mosquitto.db.

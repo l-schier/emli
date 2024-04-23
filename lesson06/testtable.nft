@@ -1,19 +1,40 @@
 #!/sbin/nft -f
 
-define WAN0 = wlan0 # replace by your network device name
+define WAN0 = eth0 # replace by your network device name
 
 flush ruleset
 
 table ip nat {
 	chain prerouting {
-		type nat hook prerouting priority 0; policy drop;
-
-		tcp dport {22, 80} accept;
+		type nat hook prerouting priority 0; policy accept;
+		meta nftrace set 1
 	}
 
-	# for all packets to WAN, after routing, replace source address with primary IP of WAN interface
 	chain postrouting {
 		type nat hook postrouting priority 100; policy accept;
 		oifname $WAN0 masquerade
 	}
+}
+
+table ip filter {
+    chain input {
+        type filter hook input priority 0;
+        ct state {established, related} accept
+        tcp dport 22 accept
+	tcp dport 80 accept
+	iifname $WAN0 accept
+	iifname wlan0 accept
+	iifname lo accept
+	ip protocol icmp accept
+	policy drop;
+	meta nftrace set 1
+    }
+
+    chain forward {
+        type filter hook forward priority 0; policy accept;
+    }
+
+    chain output {
+        type filter hook output priority 0; policy accept;
+    }
 }
